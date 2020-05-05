@@ -1,0 +1,17 @@
+#see-button, #download-button {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 1rem;
+  margin: 0 4.5rem 1.5rem;
+  width: 9rem;
+  font-weight: bold;
+}
+
+#filename-text, #url-text {
+  padding: 0.25rem;
+  width: 20rem;
+}
+
+#content-type-group, #file-type-group {
+  border-width: 0px;
+  padding: 0.1rem;
+}

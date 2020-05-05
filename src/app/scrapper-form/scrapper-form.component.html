@@ -1,0 +1,43 @@
+<div>
+  <ul>
+    <li>
+      <p><label for="url-text">Specify URL of web page you'd like to scrap:</label></p>
+      <input type="text" id="url-text" (change)="onSetUrl($event)" value=""><br>
+    </li>
+
+    <li>
+      <p>Choose part of content from web page which you'd like to see:</p>
+      <fieldset id="content-type-group">
+        <input type="radio" id="content-type-radio-text" value="-text" name="content-type-group" (change)="onSetContentType($event)">
+        <label for="content-type-radio-text">Text from page</label><br>
+        <input type="radio" id="content-type-radio-head" value="-head" name="content-type-group" (change)="onSetContentType($event)">
+        <label for="content-type-radio-head">Head of HTML content</label><br>
+        <input type="radio" id="content-type-radio-body" value="-body" name="content-type-group" (change)="onSetContentType($event)">
+        <label for="content-type-radio-body">Body of HTML content</label><br>
+        <input type="radio" id="content-type-radio-all" value="-all" name="content-type-group" (change)="onSetContentType($event)">
+        <label for="content-type-radio-all">Whole HTML content</label><br>
+      </fieldset>
+    </li>
+
+    <li>
+      <p>Choose downloading file type:</p>
+      <fieldset id="file-type-group">
+        <input type="radio" id="file-type-radio-txt" value="-txt" name="file-type-group" (change)="onSetFileType($event)">
+        <label for="file-type-radio-txt">txt</label><br>
+        <input type="radio" id="file-type-radio-html" value="-html" name="file-type-group" (change)="onSetFileType($event)">
+        <label for="file-type-radio-html">html</label><br>
+        <input type="radio" id="file-type-radio-xml" value="-xml" name="file-type-group" (change)="onSetFileType($event)">
+        <label for="file-type-radio-xml">xml</label><br>
+      </fieldset>
+    </li>
+
+    <li>
+      <p><label for="filename-text">Specify filename (not necessary):</label></p>
+      <input type="text" id="filename-text" (change)="onSetFileName($event)"><br><br>
+    </li>
+  </ul>
+
+  <input type="button" id="see-button" (click)="onClickSee()" value="See">
+
+  <input type="button" id="download-button" (click)="onClickDownload()" value="Download">
+</div>
