@@ -11,6 +11,8 @@ export class ScrapperFormComponent implements OnInit {
 
   @Output() OnShow = new EventEmitter<string>();
 
+  private disabled = true;
+
   constructor(private scrapperService: ScrapperService) { }
 
   ngOnInit(): void {
@@ -20,6 +22,11 @@ export class ScrapperFormComponent implements OnInit {
 
   onSetUrl(event: any): void {
     this.scrapperService.setUrl(event.target.value);
+    if (event.target.value === '') {
+      this.disabled = true;
+    } else {
+      this.disabled = false;
+    }
   }
 
   onSetContentType(event: any): void {

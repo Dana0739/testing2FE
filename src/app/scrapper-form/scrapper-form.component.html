@@ -37,7 +37,7 @@
     </li>
   </ul>
 
-  <input type="button" id="see-button" (click)="onClickSee()" value="See">
+  <input type="button" id="see-button" (click)="onClickSee()" value="See" [disabled]="disabled">
 
-  <input type="button" id="download-button" (click)="onClickDownload()" value="Download">
+  <input type="button" id="download-button" (click)="onClickDownload()" value="Download" [disabled]="disabled">
 </div>
